@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct OKLockApp: App {
+    @StateObject var rentViewModel = RentViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(rentViewModel)
         }
     }
 }
