@@ -11,7 +11,7 @@ import SwiftUI
 struct OKLockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            QRReaderView()
         }
     }
 }

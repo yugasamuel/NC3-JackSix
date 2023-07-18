@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8C982A657E7E00834760 /* OKLockApp.swift */; };
-		65EC8C9B2A657E7E00834760 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8C9A2A657E7E00834760 /* ContentView.swift */; };
 		65EC8C9D2A657E7F00834760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC8C9C2A657E7F00834760 /* Assets.xcassets */; };
 		65EC8CA02A657E7F00834760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC8C9F2A657E7F00834760 /* Preview Assets.xcassets */; };
 		65EC8CAA2A657E8000834760 /* OKLockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8CA92A657E8000834760 /* OKLockTests.swift */; };
 		65EC8CB42A657E8000834760 /* OKLockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8CB32A657E8000834760 /* OKLockUITests.swift */; };
 		65EC8CB62A657E8000834760 /* OKLockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8CB52A657E8000834760 /* OKLockUITestsLaunchTests.swift */; };
+		BAF9B7082A663F870051312D /* encryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9B7072A663F870051312D /* encryption.swift */; };
+		BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9B7102A6640800051312D /* QRReaderView.swift */; };
+		BAF9B7132A6640D50051312D /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9B7122A6640D50051312D /* QRScannerView.swift */; };
+		BAF9B7152A6640F10051312D /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9B7142A6640F10051312D /* ScannerController.swift */; };
+		BAF9B7172A6642160051312D /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9B7162A6642160051312D /* QRGeneratorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		65EC8C952A657E7E00834760 /* OKLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EC8C982A657E7E00834760 /* OKLockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKLockApp.swift; sourceTree = "<group>"; };
-		65EC8C9A2A657E7E00834760 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		65EC8C9C2A657E7F00834760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65EC8C9F2A657E7F00834760 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65EC8CA52A657E8000834760 /* OKLockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKLockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,11 @@
 		65EC8CAF2A657E8000834760 /* OKLockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OKLockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EC8CB32A657E8000834760 /* OKLockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKLockUITests.swift; sourceTree = "<group>"; };
 		65EC8CB52A657E8000834760 /* OKLockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKLockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BAF9B7072A663F870051312D /* encryption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = encryption.swift; sourceTree = "<group>"; };
+		BAF9B7102A6640800051312D /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
+		BAF9B7122A6640D50051312D /* QRScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		BAF9B7142A6640F10051312D /* ScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
+		BAF9B7162A6642160051312D /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 		65EC8C8C2A657E7E00834760 = {
 			isa = PBXGroup;
 			children = (
+				BAF9B70F2A66401F0051312D /* encryption */,
+				BAF9B70B2A663FC40051312D /* QRGenerator */,
 				65EC8C972A657E7E00834760 /* OKLock */,
 				65EC8CA82A657E8000834760 /* OKLockTests */,
 				65EC8CB22A657E8000834760 /* OKLockUITests */,
@@ -95,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				65EC8C982A657E7E00834760 /* OKLockApp.swift */,
-				65EC8C9A2A657E7E00834760 /* ContentView.swift */,
+				BAF9B7142A6640F10051312D /* ScannerController.swift */,
+				BAF9B7122A6640D50051312D /* QRScannerView.swift */,
+				BAF9B7102A6640800051312D /* QRReaderView.swift */,
 				65EC8C9C2A657E7F00834760 /* Assets.xcassets */,
 				65EC8C9E2A657E7F00834760 /* Preview Content */,
 			);
@@ -125,6 +137,22 @@
 				65EC8CB52A657E8000834760 /* OKLockUITestsLaunchTests.swift */,
 			);
 			path = OKLockUITests;
+			sourceTree = "<group>";
+		};
+		BAF9B70B2A663FC40051312D /* QRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				BAF9B7162A6642160051312D /* QRGeneratorView.swift */,
+			);
+			path = QRGenerator;
+			sourceTree = "<group>";
+		};
+		BAF9B70F2A66401F0051312D /* encryption */ = {
+			isa = PBXGroup;
+			children = (
+				BAF9B7072A663F870051312D /* encryption.swift */,
+			);
+			path = encryption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65EC8C9B2A657E7E00834760 /* ContentView.swift in Sources */,
+				BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */,
+				BAF9B7082A663F870051312D /* encryption.swift in Sources */,
 				65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */,
+				BAF9B7172A6642160051312D /* QRGeneratorView.swift in Sources */,
+				BAF9B7132A6640D50051312D /* QRScannerView.swift in Sources */,
+				BAF9B7152A6640F10051312D /* ScannerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +457,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +487,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
