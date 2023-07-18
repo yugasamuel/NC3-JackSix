@@ -26,6 +26,22 @@ class RentViewModel: ObservableObject {
         }
     }
     
+    func addRent() {
+        _ = RentEntity(context: dataController.context)
+        saveData()
+    }
+    
+    func deleteAllData() {
+        
+        let context = dataController.context
+        
+        for rent in rents {
+            context.delete(rent)
+        }
+        
+        saveData()
+    }
+    
     func saveData() {
         dataController.saveData()
         fetchRents()

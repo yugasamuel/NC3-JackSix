@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var rentViewModel: RentViewModel
+    
     var body: some View {
-        VStack {
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(rentViewModel.rents) { rent in
+                    HStack {
+                        Text(rent.wrappedIdentifier)
+                        Spacer()
+                        Text(rent.wrappedUsername)
+                    }
+                }
+            }
+            .navigationTitle("OKLock")
+            .toolbar(){
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        rentViewModel.addRent()
+                    }, label: {
+                        Text("Add dummy")
+                    })
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    
+                    Button(action: {
+                        rentViewModel.deleteAllData()
+                    }, label: {
+                        Text("Delete")
+                    })
+                }
+                
+            }
         }
     }
 }
