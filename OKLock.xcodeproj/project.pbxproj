@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652803322A665398009A620E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652803312A665398009A620E /* ContentView.swift */; };
 		656843BA2A65822E00DDF873 /* OKLock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 656843B82A65822E00DDF873 /* OKLock.xcdatamodeld */; };
 		656843BE2A65841500DDF873 /* RentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */; };
 		656843BF2A65841500DDF873 /* RentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652803312A665398009A620E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		656843B92A65822E00DDF873 /* OKLock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OKLock.xcdatamodel; sourceTree = "<group>"; };
 		656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 		656843B32A65814E00DDF873 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				65EC8C9A2A657E7E00834760 /* ContentView.swift */,
+				652803312A665398009A620E /* ContentView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -367,13 +369,13 @@
 			files = (
 				656843C32A6589F700DDF873 /* DataController.swift in Sources */,
 				656843BA2A65822E00DDF873 /* OKLock.xcdatamodeld in Sources */,
-				65EC8C9B2A657E7E00834760 /* ContentView.swift in Sources */,
 				656843BF2A65841500DDF873 /* RentEntity+CoreDataProperties.swift in Sources */,
 				656843C12A6589EF00DDF873 /* RentViewModel.swift in Sources */,
 				65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */,
 				656843BE2A65841500DDF873 /* RentEntity+CoreDataClass.swift in Sources */,
 				BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */,
 				BAF9B7082A663F870051312D /* encryption.swift in Sources */,
+				652803322A665398009A620E /* ContentView.swift in Sources */,
 				65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */,
 				BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */,
 				BAF9B7082A663F870051312D /* encryption.swift in Sources */,
