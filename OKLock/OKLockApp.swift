@@ -15,6 +15,7 @@ struct OKLockApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(rentViewModel)
+            QRReaderView()
         }
     }
 }
