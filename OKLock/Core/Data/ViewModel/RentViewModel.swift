@@ -42,6 +42,10 @@ class RentViewModel: ObservableObject {
         saveData()
     }
     
+    func updateData() {
+        
+    }
+    
     func saveData() {
         dataController.saveData()
         fetchRents()
