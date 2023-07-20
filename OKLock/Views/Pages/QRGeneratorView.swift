@@ -52,10 +52,22 @@ struct QRGeneratorView: View {
     
    
     func generateUUIDCode(){
-    
+        guard !textInput.isEmpty else {
+            return
+        }
+//        let data = Data(textInput.utf8)
         
-        let data = Data(UUID().uuidString.utf8)
+        do {
+            key = try generateSymmetricKey(fromString: keyString)
+            encryptedData = try encryptData(stringMessage: UUID().uuidString, key: key!)
+            print("Encrypted Data: \(encryptedData)")
+
+        } catch {
+            print("Error: \(error)")
+        }
+        let data = Data(encryptedData.utf8)
         
+        print(type(of: data))
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")
             if let ciImage = filter.outputImage {

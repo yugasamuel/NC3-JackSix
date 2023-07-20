@@ -20,8 +20,8 @@ struct OKLockApp: App {
         WindowGroup {
 //            ContentView()
 //                .environmentObject(rentViewModel)
-//            QRReaderView()
-            QRGeneratorView()
+            QRReaderView()
+//            QRGeneratorView()
 //            FirebaseTest()
 //                .environmentObject(rentViewModel)
         }
