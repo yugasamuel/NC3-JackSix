@@ -32,7 +32,6 @@ struct ContentView: View {
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    
                     Button(action: {
                         rentViewModel.deleteAllData()
                     }, label: {

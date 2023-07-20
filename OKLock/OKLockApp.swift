@@ -6,16 +6,24 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct OKLockApp: App {
     @StateObject var rentViewModel = RentViewModel()
     
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(rentViewModel)
-            QRReaderView()
+//            ContentView()
+//                .environmentObject(rentViewModel)
+//            QRReaderView()
+            QRGeneratorView()
+//            FirebaseTest()
+//                .environmentObject(rentViewModel)
         }
     }
 }
