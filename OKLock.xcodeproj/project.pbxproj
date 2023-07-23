@@ -11,6 +11,7 @@
 		656461272A6D68FD009DC241 /* LockerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656461262A6D68FD009DC241 /* LockerDetailView.swift */; };
 		656461292A6D6F69009DC241 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656461282A6D6F69009DC241 /* ViewExtension.swift */; };
 		6564612B2A6D7389009DC241 /* ExtendRentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564612A2A6D7389009DC241 /* ExtendRentView.swift */; };
+		6564612D2A6D84D0009DC241 /* QRSuccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564612C2A6D84D0009DC241 /* QRSuccessState.swift */; };
 		656843BA2A65822E00DDF873 /* OKLock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 656843B82A65822E00DDF873 /* OKLock.xcdatamodeld */; };
 		656843BE2A65841500DDF873 /* RentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */; };
 		656843BF2A65841500DDF873 /* RentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */; };
@@ -74,6 +75,7 @@
 		656461262A6D68FD009DC241 /* LockerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerDetailView.swift; sourceTree = "<group>"; };
 		656461282A6D6F69009DC241 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = OKLock/Views/Pages/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
 		6564612A2A6D7389009DC241 /* ExtendRentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendRentView.swift; sourceTree = "<group>"; };
+		6564612C2A6D84D0009DC241 /* QRSuccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRSuccessState.swift; sourceTree = "<group>"; };
 		656843B92A65822E00DDF873 /* OKLock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OKLock.xcdatamodel; sourceTree = "<group>"; };
 		656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				658941B82A6D63BE00172C38 /* Transaction.swift */,
 				656461262A6D68FD009DC241 /* LockerDetailView.swift */,
 				6564612A2A6D7389009DC241 /* ExtendRentView.swift */,
+				6564612C2A6D84D0009DC241 /* QRSuccessState.swift */,
 				658941AB2A6D61E700172C38 /* QR Views */,
 			);
 			path = Pages;
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6564612D2A6D84D0009DC241 /* QRSuccessState.swift in Sources */,
 				656843C32A6589F700DDF873 /* DataController.swift in Sources */,
 				658941AF2A6D638000172C38 /* HomePage.swift in Sources */,
 				656843BA2A65822E00DDF873 /* OKLock.xcdatamodeld in Sources */,

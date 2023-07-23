@@ -10,17 +10,17 @@ import AVFoundation
 import CryptoKit
 
 struct ScanQRView: View {
+    @EnvironmentObject var rentViewModel: RentViewModel
     @State private var encryptedData: String = ""
     @State private var key: SymmetricKey?
     @State private var isShowingScanner = true
-    @State private var scannedCode: String?
     private let keyString = "kuncikebenaran"
     
     var body: some View {
-        NavigationView{
-            ZStack{
+        ZStack{
+            if isShowingScanner {
                 //Change with Your Scan QR Code here
-                QRScannerView(scannedCode: $scannedCode, isShowingScanner: $isShowingScanner)
+                QRScannerView(scannedCode: $rentViewModel.scannedCode, isShowingScanner: $isShowingScanner)
                 //Decoration Overlay
                 VStack(alignment: .center){
                     Spacer()
@@ -47,9 +47,31 @@ struct ScanQRView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     Spacer()
                 }
+            } else {
+                QRSuccessState()
             }
-                .navigationBarBackButtonHidden(true)
-                .ignoresSafeArea()
+        }
+        .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea()
+    }
+    
+    func decrypt() -> String? {
+        do {
+            guard let code = rentViewModel.scannedCode else {
+                return nil
+            }
+            
+            let key = try generateSymmetricKey(fromString: keyString)
+            
+            // Panggil fungsi dekripsi
+            let decryptedData = try decryptData(sealedBoxBaseString: code, key: key)
+            
+            print("Decrypted Data: \(decryptedData)")
+            print(type(of: key))
+            return decryptedData
+        } catch {
+            print("Error: \(error)")
+            return nil
         }
     }
 }
@@ -57,6 +79,7 @@ struct ScanQRView: View {
 struct ScanQRView_Previews: PreviewProvider {
     static var previews: some View {
         ScanQRView()
+            .environmentObject(RentViewModel())
     }
 }
 
