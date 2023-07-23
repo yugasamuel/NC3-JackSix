@@ -21,3 +21,31 @@ struct Rent: Identifiable {
     
     static let example = Rent(id: UUID().uuidString, location: "Lebak Bulus Grab", duration: 2, timestamp: Date.now, isLocked: true, username: "Yuga")
 }
+
+
+
+
+struct scannedUUID: Identifiable{
+    var id = UUID()
+    var UUIDScanned: String
+
+    init(UUIDScanned:String) {
+        self.UUIDScanned = UUIDScanned
+        
+    }
+}
+
+extension scannedUUID {
+    static var sampleData: [scannedUUID] {
+        [
+            
+        ]
+
+    }
+}
+
+func addToScannedUUID(UUIDScanned:String) {
+    let newUsersData = scannedUUID(UUIDScanned: UUIDScanned)
+    scannedUUIDArray.append(newUsersData)
+}
+var scannedUUIDArray = scannedUUID.sampleData

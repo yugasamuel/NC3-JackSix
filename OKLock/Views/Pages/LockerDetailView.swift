@@ -28,12 +28,12 @@ struct LockerDetailView: View {
                 Text(rent.location)
                     .font(.title3)
             }
-            
-            Image("QR")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 240)
-                .padding()
+            QRGeneratorView().padding(.vertical,25)
+//            Image("QR")
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 240)
+//                .padding()
             
             Text("Aktif hingga \(rent.formattedTimestamp)")
                 .font(.title3)

@@ -10,17 +10,18 @@ import AVFoundation
 import CryptoKit
 
 struct ScanQRView: View {
-    @EnvironmentObject var rentViewModel: RentViewModel
+    @EnvironmentObject var RentViewModel: RentViewModel
     @State private var encryptedData: String = ""
     @State private var key: SymmetricKey?
     @State private var isShowingScanner = true
     private let keyString = "kuncikebenaran"
+    @State var scannedCodeRaw: String?
     
     var body: some View {
         ZStack{
             if isShowingScanner {
                 //Change with Your Scan QR Code here
-                QRScannerView(scannedCode: $rentViewModel.scannedCode, isShowingScanner: $isShowingScanner)
+                QRScannerView(scannedCode: $scannedCodeRaw, isShowingScanner: $isShowingScanner)
                 //Decoration Overlay
                 VStack(alignment: .center){
                     Spacer()
@@ -48,7 +49,13 @@ struct ScanQRView: View {
                     Spacer()
                 }
             } else {
+
                 QRSuccessState()
+                    .onAppear{ scannedCodeRaw = decrypt()
+                        addToScannedUUID(UUIDScanned: scannedCodeRaw!)
+
+                        print(scannedCodeRaw)
+                    }
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -57,7 +64,7 @@ struct ScanQRView: View {
     
     func decrypt() -> String? {
         do {
-            guard let code = rentViewModel.scannedCode else {
+            guard let code = scannedCodeRaw else {
                 return nil
             }
             

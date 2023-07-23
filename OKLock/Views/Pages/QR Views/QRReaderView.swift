@@ -16,6 +16,7 @@ struct QRReaderView: View {
     @State private var key: SymmetricKey?
     @State private var isShowingScanner = false
     @State private var scannedCode: String?
+    @State var scannedCodeRaw: String?
     
     var body: some View {
         VStack {
