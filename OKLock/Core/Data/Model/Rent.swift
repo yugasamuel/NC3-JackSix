@@ -15,5 +15,9 @@ struct Rent: Identifiable {
     var isLocked: Bool
     var username: String
     
-    static let example = Rent(id: UUID(), location: "Lebak Bulus Grab", duration: 1, timestamp: Date.now, isLocked: true, username: "Yuga")
+    var formattedTimestamp: String {
+        timestamp.formatted(date: .abbreviated, time: .shortened)
+    }
+    
+    static let example = Rent(id: UUID().uuidString, location: "Lebak Bulus Grab", duration: 2, timestamp: Date.now, isLocked: true, username: "Yuga")
 }

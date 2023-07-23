@@ -132,4 +132,9 @@ class RentViewModel: ObservableObject {
              }
          }
      }
+    
+    func addDurationToTimestamp(index: Int) {
+        let hoursToAdd = TimeInterval(rentList[index].duration * 3600)
+        rentList[index].timestamp = rentList[index].timestamp.addingTimeInterval(hoursToAdd)
+    }
 }

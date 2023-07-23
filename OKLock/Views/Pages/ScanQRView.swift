@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import AVFoundation
+import CryptoKit
 
 struct ScanQRView: View {
+    @State private var encryptedData: String = ""
+    @State private var key: SymmetricKey?
+    @State private var isShowingScanner = true
+    @State private var scannedCode: String?
+    private let keyString = "kuncikebenaran"
+    
     var body: some View {
         NavigationView{
             ZStack{
                 //Change with Your Scan QR Code here
-                Color.green
+                QRScannerView(scannedCode: $scannedCode, isShowingScanner: $isShowingScanner)
                 //Decoration Overlay
                 VStack(alignment: .center){
                     Spacer()
@@ -51,4 +59,4 @@ struct ScanQRView_Previews: PreviewProvider {
         ScanQRView()
     }
 }
-}
+

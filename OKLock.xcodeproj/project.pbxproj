@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		652803322A665398009A620E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652803312A665398009A620E /* ContentView.swift */; };
+		656461272A6D68FD009DC241 /* LockerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656461262A6D68FD009DC241 /* LockerDetailView.swift */; };
+		656461292A6D6F69009DC241 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656461282A6D6F69009DC241 /* ViewExtension.swift */; };
+		6564612B2A6D7389009DC241 /* ExtendRentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6564612A2A6D7389009DC241 /* ExtendRentView.swift */; };
 		656843BA2A65822E00DDF873 /* OKLock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 656843B82A65822E00DDF873 /* OKLock.xcdatamodeld */; };
 		656843BE2A65841500DDF873 /* RentEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */; };
 		656843BF2A65841500DDF873 /* RentEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */; };
@@ -19,7 +22,6 @@
 		658941B32A6D639800172C38 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658941B22A6D639800172C38 /* DetailView.swift */; };
 		658941B52A6D63A500172C38 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658941B42A6D63A500172C38 /* LocationView.swift */; };
 		658941B92A6D63BE00172C38 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658941B82A6D63BE00172C38 /* Transaction.swift */; };
-		658941BB2A6D640800172C38 /* LockerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658941BA2A6D640800172C38 /* LockerDetailView.swift */; };
 		65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EC8C982A657E7E00834760 /* OKLockApp.swift */; };
 		65EC8C9D2A657E7F00834760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC8C9C2A657E7F00834760 /* Assets.xcassets */; };
 		65EC8CA02A657E7F00834760 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65EC8C9F2A657E7F00834760 /* Preview Assets.xcassets */; };
@@ -69,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		652803312A665398009A620E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		656461262A6D68FD009DC241 /* LockerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerDetailView.swift; sourceTree = "<group>"; };
+		656461282A6D6F69009DC241 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = OKLock/Views/Pages/ViewExtension.swift; sourceTree = SOURCE_ROOT; };
+		6564612A2A6D7389009DC241 /* ExtendRentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendRentView.swift; sourceTree = "<group>"; };
 		656843B92A65822E00DDF873 /* OKLock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OKLock.xcdatamodel; sourceTree = "<group>"; };
 		656843BC2A65841500DDF873 /* RentEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		656843BD2A65841500DDF873 /* RentEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RentEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -80,7 +85,6 @@
 		658941B22A6D639800172C38 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		658941B42A6D63A500172C38 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		658941B82A6D63BE00172C38 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		658941BA2A6D640800172C38 /* LockerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockerDetailView.swift; sourceTree = "<group>"; };
 		65EC8C952A657E7E00834760 /* OKLock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKLock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EC8C982A657E7E00834760 /* OKLockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OKLockApp.swift; sourceTree = "<group>"; };
 		65EC8C9C2A657E7F00834760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,7 +178,8 @@
 				658941AE2A6D638000172C38 /* HomePage.swift */,
 				658941B42A6D63A500172C38 /* LocationView.swift */,
 				658941B82A6D63BE00172C38 /* Transaction.swift */,
-				658941BA2A6D640800172C38 /* LockerDetailView.swift */,
+				656461262A6D68FD009DC241 /* LockerDetailView.swift */,
+				6564612A2A6D7389009DC241 /* ExtendRentView.swift */,
 				658941AB2A6D61E700172C38 /* QR Views */,
 			);
 			path = Pages;
@@ -183,6 +188,7 @@
 		656843B42A65816C00DDF873 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				656461282A6D6F69009DC241 /* ViewExtension.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -456,7 +462,7 @@
 				658941B32A6D639800172C38 /* DetailView.swift in Sources */,
 				656843BE2A65841500DDF873 /* RentEntity+CoreDataClass.swift in Sources */,
 				BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */,
-				658941BB2A6D640800172C38 /* LockerDetailView.swift in Sources */,
+				656461272A6D68FD009DC241 /* LockerDetailView.swift in Sources */,
 				BAF9B7082A663F870051312D /* encryption.swift in Sources */,
 				652803322A665398009A620E /* ContentView.swift in Sources */,
 				658941B52A6D63A500172C38 /* LocationView.swift in Sources */,
@@ -464,6 +470,7 @@
 				65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */,
 				BAF9B7112A6640800051312D /* QRReaderView.swift in Sources */,
 				658941B92A6D63BE00172C38 /* Transaction.swift in Sources */,
+				656461292A6D6F69009DC241 /* ViewExtension.swift in Sources */,
 				BAF9B7082A663F870051312D /* encryption.swift in Sources */,
 				658941AD2A6D627500172C38 /* CustomTabBar.swift in Sources */,
 				65EC8C992A657E7E00834760 /* OKLockApp.swift in Sources */,
@@ -473,6 +480,7 @@
 				BAF9B7172A6642160051312D /* QRGeneratorView.swift in Sources */,
 				BAF9B7132A6640D50051312D /* QRScannerView.swift in Sources */,
 				BAF9B7152A6640F10051312D /* ScannerController.swift in Sources */,
+				6564612B2A6D7389009DC241 /* ExtendRentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OKLock/Preview Content\"";
-				DEVELOPMENT_TEAM = YWZWHPN8QL;
+				DEVELOPMENT_TEAM = 9MCN5686MN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -662,7 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OKLock/Preview Content\"";
-				DEVELOPMENT_TEAM = YWZWHPN8QL;
+				DEVELOPMENT_TEAM = 9MCN5686MN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
