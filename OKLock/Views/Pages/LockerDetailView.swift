@@ -20,7 +20,7 @@ struct LockerDetailView: View {
             Text("Loker 14A")
                 .font(.title)
                 .fontWeight(.semibold)
-                .padding(.top, 40)
+                .padding(.top, 65)
             
             HStack {
                 Image(systemName: "mappin")
@@ -53,24 +53,24 @@ struct LockerDetailView: View {
             }
             .padding()
             .frame(width: UIScreen.main.bounds.size.width - 40)
-            .background(.secondary.opacity(0.2))
+            .background(Color(hex: "EFEFEF"))
             .cornerRadius(8, corners: [.topLeft, .topRight])
             
             HStack {
-                Image(systemName: "clock")
+                Image(systemName: "xmark")
                     .foregroundColor(.white)
                     .font(.title3)
                     .padding(8)
                     .background(.yellow)
                     .cornerRadius(5)
-                Text("Perpanjang Masa Pinjaman")
+                Text("Akhiri Masa Pinjaman")
                 Spacer()
                 Image(systemName: "arrow.right")
                     .font(.title3)
             }
             .padding()
             .frame(width: UIScreen.main.bounds.size.width - 40)
-            .background(.secondary.opacity(0.2))
+            .background(Color(hex: "EFEFEF"))
             .cornerRadius(8, corners: [.bottomLeft, .bottomRight])
             
             Spacer()
@@ -79,6 +79,9 @@ struct LockerDetailView: View {
         .onAppear {
 //            rentViewModel.addDurationToTimestamp(index: rentIndex)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(hex: "E4E4E4"))
+        .ignoresSafeArea()
     }
 }
 

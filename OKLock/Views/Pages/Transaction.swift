@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Transaction: View {
-    @State private var selectedTab = 1
+    @State private var selectedTab = 0
     
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color(hex: "FFCC52"))
@@ -49,67 +49,64 @@ struct Transaction_Previews: PreviewProvider {
 
 struct ActiveView: View {
     var body: some View {
-        NavigationView{
-            ZStack{
-                Color(hex: "E4E4E4")
-                GeometryReader{geometry in
-                    ScrollView{
-                        VStack{
-                            HStack{
-                                Text("Loker 14A")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
-                                    .multilineTextAlignment(.leading)
-                                Spacer()
-                                Text("Selasa, 18 Juli 2023")
-                                    .font(.subheadline)
-                            }
-                            HStack{
-                                Text("(01:34:27)")
-                                    .font(.subheadline)
-                                Spacer()
-                            }
-                            HStack{
-                                Image(systemName: "mappin")
-                                Text("Stasiun Lebak Bulus Grab")
-                                    .font(.system(size: 15))
-                                    .fontWeight(.light)
-                                Spacer()
-                                Text("Aktif")
-                                    .foregroundColor(Color.white)
-                                    .padding(EdgeInsets(top: 3, leading: 15, bottom: 3, trailing: 15))
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    .background(Color(hex: "579837"))
-                                    .clipShape(RoundedRectangle(cornerRadius: 30))
-                            }
-                            HStack{
-                                Spacer()
-                                Button(action: {}, label: {
-                                    Text("Detail")
-                                        .font(.system(size: 14))
-                                })
-                                .foregroundColor(Color(hex: "193346"))
-                                .padding(.horizontal,15)
-                                .padding(.vertical,3)
-                                .background(Color(hex: "ABC9E1"))
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                .frame(width: .infinity, height: 10)
-                                .padding(.horizontal,26)
-                                Spacer()
-                            }
+        ZStack{
+            Color(hex: "E4E4E4")
+            GeometryReader{geometry in
+                ScrollView{
+                    VStack{
+                        HStack{
+                            Text("Loker 14A")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                            Text("Selasa, 24 Juli 2023")
+                                .font(.subheadline)
                         }
-                        .padding(.all)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .frame(width: geometry.size.width - 50)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
-                        .shadow(color: Color.black.opacity(0.2),radius: 2,y: 3)
+                        HStack{
+                            Text("(01:34:27)")
+                                .font(.subheadline)
+                            Spacer()
+                        }
+                        HStack{
+                            Image(systemName: "mappin")
+                            Text("Stasiun Lebak Bulus Grab")
+                                .font(.system(size: 15))
+                                .fontWeight(.light)
+                            Spacer()
+                            Text("Aktif")
+                                .foregroundColor(Color.white)
+                                .padding(EdgeInsets(top: 3, leading: 15, bottom: 3, trailing: 15))
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .background(Color(hex: "579837"))
+                                .clipShape(RoundedRectangle(cornerRadius: 30))
+                        }
+                        HStack{
+                            Spacer()
+                            NavigationLink(destination: LockerDetailView(rent: Rent.example)) {
+                                Text("Detail")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(Color(hex: "193346"))
+                                    .padding(.horizontal,15)
+                                    .padding(.vertical,3)
+                                    .background(Color(hex: "ABC9E1"))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .frame(width: .infinity, height: 10)
+                                    .padding(.horizontal,26)
+                            }
+                            Spacer()
+                        }
                     }
-                    .frame(width: geometry.size.width, height: .infinity)
+                    .padding(.all)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .frame(width: geometry.size.width - 50)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
+                    .shadow(color: Color.black.opacity(0.2),radius: 2,y: 3)
                 }
+                .frame(width: geometry.size.width, height: .infinity)
             }
-            
         }
     }
 }
