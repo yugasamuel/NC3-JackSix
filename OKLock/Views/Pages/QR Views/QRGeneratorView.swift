@@ -44,8 +44,8 @@ struct QRGeneratorView: View {
     }
     
     func generateUUIDCode(){
-        let UUID = scannedUUIDArray[0].UUIDScanned
-        var dataQR = UUID
+        guard !scannedUUIDArray.isEmpty else { return }
+        var dataQR = scannedUUIDArray[0].UUIDScanned
         
         guard !dataQR.isEmpty else {
             return

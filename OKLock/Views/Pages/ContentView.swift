@@ -20,9 +20,9 @@ struct ContentView: View {
                 //Custom Tab Button
                 CustomTabBar(selectedTab: $selectedTab)
         }
-
+        .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.bottom)
-
+        .preferredColorScheme(.light)
     }
 }
 

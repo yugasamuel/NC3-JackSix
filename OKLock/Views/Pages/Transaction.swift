@@ -33,7 +33,7 @@ struct Transaction: View {
                     }
                     Spacer()
                 }
-                
+                .ignoresSafeArea()
             }
             .background(Color(hex: "E4E4E4"))
         }
@@ -108,6 +108,7 @@ struct ActiveView: View {
                 .frame(width: geometry.size.width, height: .infinity)
             }
         }
+        .foregroundColor(.black)
     }
 }
 
