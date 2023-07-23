@@ -1,53 +1,33 @@
 //
 //  ContentView.swift
-//  OKLock
+//  SmartLocker
 //
-//  Created by Yuga Samuel on 17/07/23.
+//  Created by Juliandy on 19/07/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var rentViewModel: RentViewModel
-    
+    @State var selectedTab: String = "house.fill"
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(rentViewModel.rents) { rent in
-                    HStack {
-                        Text(rent.wrappedIdentifier)
-                        Spacer()
-                        Text(rent.wrappedUsername)
-                    }
-                }
-            }
-            .navigationTitle("OKLock")
-            .toolbar(){
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        rentViewModel.addRent()
-                    }, label: {
-                        Text("Add dummy")
-                    })
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        rentViewModel.deleteAllData()
-                    }, label: {
-                        Text("Delete")
-                    })
-                }
-                
-            }
+        VStack(spacing: 0){
+//            Spacer()
+//                if selectedTab == "house.fill"{
+//                    HomePage()
+//                } else if selectedTab == "scroll.fill"{
+//                    Transaction()
+//                }
+                //Custom Tab Button
+                CustomTabBar(selectedTab: $selectedTab)
         }
+
+        .edgesIgnoringSafeArea(.bottom)
+
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(RentViewModel())
     }
 }
-
-
